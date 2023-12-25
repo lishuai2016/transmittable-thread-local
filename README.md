@@ -373,7 +373,7 @@ These paths are searched by the bootstrap class loader after the platform specif
 
 # 🔌 Java API Docs
 
-当前版本的Java API文档地址： <https://alibaba.github.io/transmittable-thread-local/apidocs/2.14.4/index.html>
+当前版本的Java API文档地址： <https://alibaba.github.io/transmittable-thread-local/apidocs/>
 
 # 🍪 Maven依赖
 
@@ -383,7 +383,7 @@ These paths are searched by the bootstrap class loader after the platform specif
 <dependency>
     <groupId>com.alibaba</groupId>
     <artifactId>transmittable-thread-local</artifactId>
-    <version>2.14.4</version>
+    <version>2.14.5</version>
 </dependency>
 ```
 
@@ -447,8 +447,8 @@ JDK Bug: <https://bugs.java.com/bugdatabase/view_bug.do?bug_id=8021205>
 **_1. 从业务使用者角度来看_**
 
 1. **繁琐**
-   - 业务逻辑要知道：有哪些上下文；各个上下文是如何获取的。
-   - 并需要业务逻辑去一个一个地捕捉与传递。
+    - 业务逻辑要知道：有哪些上下文；各个上下文是如何获取的。
+    - 并需要业务逻辑去一个一个地捕捉与传递。
 1. **依赖**
     - 需要直接依赖不同`ThreadLocal`上下文各自的获取的逻辑或类。
     - 像`RPC`的上下文（如`Dubbo`的`RpcContext`）、全链路跟踪的上下文（如`SkyWalking`的`ContextManager`）、不同业务模块中的业务流程上下文，等等。
